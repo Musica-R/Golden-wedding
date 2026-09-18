@@ -1,0 +1,84 @@
+.gw-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: var(--gw-ivory);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+  transition: opacity 0.8s var(--gw-ease), visibility 0.8s var(--gw-ease);
+}
+
+.gw-preloader--leaving {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.gw-preloader__mark {
+  animation: gw-mark-fade 1.4s var(--gw-ease) both;
+}
+
+.gw-preloader__ring {
+  stroke-dasharray: 190;
+  stroke-dashoffset: 190;
+  animation: gw-ring-draw 1.6s var(--gw-ease) forwards;
+}
+
+.gw-preloader__label {
+  font-family: var(--gw-font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  color: var(--gw-espresso-soft);
+  opacity: 0;
+  animation: gw-label-fade 1s var(--gw-ease) 0.6s forwards;
+}
+
+@keyframes gw-ring-draw {
+  from {
+    stroke-dashoffset: 190;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes gw-mark-fade {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes gw-label-fade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gw-preloader__gold-line {
+  width: 1px;
+  height: 0;
+  background: var(--gw-gold);
+  animation: gw-line-grow 1s var(--gw-ease) 0.9s forwards;
+}
+
+@keyframes gw-line-grow {
+  from {
+    height: 0;
+  }
+  to {
+    height: 28px;
+  }
+}

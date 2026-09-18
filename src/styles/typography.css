@@ -1,0 +1,44 @@
+/*
+ * Shared type utilities. Component-specific heading sizes still live
+ * next to their component (e.g. .gw-hero__headline in hero.css) —
+ * this file holds the handful of text patterns reused across pages
+ * plus the very-small-screen safety net for the fluid type scale
+ * defined in variables.css.
+ */
+
+.gw-text-italic-serif {
+  font-family: var(--gw-font-display);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.gw-text-eyebrow-light {
+  font-family: var(--gw-font-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  color: var(--gw-gold-light);
+}
+
+.gw-text-muted {
+  color: var(--gw-espresso-soft);
+}
+
+/* clamp() already scales headings fluidly, but on very narrow
+   phones (≤360px) the minimum end of a couple of the larger clamps
+   still runs a little large for the available width. */
+@media (max-width: 360px) {
+  :root {
+    --gw-size-hero: 2.3rem;
+    --gw-size-h1: 2rem;
+    --gw-size-h2: 1.65rem;
+  }
+}
+
+/* Long, unbroken words (e.g. a run-in eyebrow label) shouldn't force
+   horizontal scroll on the narrowest phones. */
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: break-word;
+}

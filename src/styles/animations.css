@@ -1,0 +1,61 @@
+/*
+ * Additional scroll-reveal variants, layered on top of the base
+ * .gw-reveal rule in global.css. Apply one of these alongside
+ * .gw-reveal (ScrollReveal always adds .gw-reveal / .gw-reveal--visible);
+ * pass the extra class via ScrollReveal's `className` prop.
+ * All respect prefers-reduced-motion via the blanket rule in global.css.
+ */
+
+.gw-reveal--left {
+  transform: translateX(-48px);
+}
+.gw-reveal--left.gw-reveal--visible {
+  transform: translateX(0);
+}
+
+.gw-reveal--right {
+  transform: translateX(48px);
+}
+.gw-reveal--right.gw-reveal--visible {
+  transform: translateX(0);
+}
+
+.gw-reveal--scale {
+  transform: scale(0.94);
+}
+.gw-reveal--scale.gw-reveal--visible {
+  transform: scale(1);
+}
+
+.gw-reveal--clip {
+  transform: none;
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 1.1s var(--gw-ease), opacity 0.6s var(--gw-ease);
+}
+.gw-reveal--clip.gw-reveal--visible {
+  clip-path: inset(0 0 0% 0);
+}
+
+/* Word-by-word heading reveal — see RevealHeading.js */
+.gw-word-reveal {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.gw-word-reveal__inner {
+  display: inline-block;
+  transform: translateY(110%);
+  transition: transform 0.9s var(--gw-ease);
+}
+
+.gw-word-reveal--visible .gw-word-reveal__inner {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gw-word-reveal__inner {
+    transition: none;
+    transform: none;
+  }
+}

@@ -1,0 +1,10 @@
+.gw-services {
+  padding: var(--gw-section-space) 0;
+  background: var(--gw-cream);
+}
+
+.gw-services__list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3.5rem, 7vw, 6rem);
+}

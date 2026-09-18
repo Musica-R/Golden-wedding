@@ -1,0 +1,213 @@
+.gw-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.7rem 0;
+  background: transparent;
+  transition:
+    background 0.5s var(--gw-ease),
+    padding 0.5s var(--gw-ease),
+    box-shadow 0.5s var(--gw-ease);
+}
+
+.gw-navbar--scrolled {
+  background: rgba(250, 246, 238, 0.94);
+  /* backdrop-filter: blur(10px); */
+  padding: 1rem 0;
+  box-shadow: 0 1px 0 var(--gw-line);
+}
+
+.gw-navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gw-navbar__mark {
+  font-family: var(--gw-font-display);
+  font-size: 1.3rem;
+  letter-spacing: 0.02em;
+  color: var(--gw-ivory);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  transition:
+    color 0.4s var(--gw-ease),
+    text-shadow 0.4s var(--gw-ease);
+}
+
+.gw-navbar--scrolled .gw-navbar__mark {
+  color: var(--gw-espresso);
+  text-shadow: none;
+}
+
+.gw-navbar__links {
+  display: flex;
+  gap: 1.9rem;
+}
+
+.gw-navbar__link {
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: rgba(250, 246, 238, 0.88);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding-bottom: 4px;
+  transition:
+    color 0.3s var(--gw-ease),
+    text-shadow 0.3s var(--gw-ease);
+}
+
+.gw-navbar--scrolled .gw-navbar__link {
+  color: var(--gw-espresso-soft);
+  text-shadow: none;
+}
+
+.gw-navbar__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gw-gold-light);
+  transition: width 0.4s var(--gw-ease);
+}
+
+.gw-navbar--scrolled .gw-navbar__link::after {
+  background: var(--gw-gold);
+}
+
+.gw-navbar__link:hover,
+.gw-navbar__link--active {
+  color: var(--gw-ivory);
+}
+
+.gw-navbar--scrolled .gw-navbar__link:hover,
+.gw-navbar--scrolled .gw-navbar__link--active {
+  color: var(--gw-espresso);
+}
+
+.gw-navbar__link:hover::after,
+.gw-navbar__link--active::after {
+  width: 100%;
+}
+
+/* Hamburger toggle: a proper 3-line icon with a comfortable tap target,
+   visible on both the transparent (over-image) and scrolled states. */
+.gw-navbar__toggle {
+  display: none;
+  position: relative;
+  z-index: 101; /* always above the full-screen mobile menu (z-index: 99) */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  margin: -6px -8px -6px 0;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.3s var(--gw-ease);
+}
+
+.gw-navbar__toggle:active {
+  background: rgba(184, 146, 90, 0.18);
+}
+
+.gw-navbar__toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--gw-ivory);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.35s var(--gw-ease),
+    opacity 0.25s var(--gw-ease),
+    background 0.35s var(--gw-ease),
+    box-shadow 0.35s var(--gw-ease);
+}
+
+.gw-navbar--scrolled .gw-navbar__toggle span {
+  background: var(--gw-espresso);
+  box-shadow: none;
+}
+
+.gw-navbar__toggle--open span {
+  background: var(--gw-espresso);
+  box-shadow: none;
+}
+
+.gw-navbar__toggle--open span:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.gw-navbar__toggle--open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.gw-navbar__toggle--open span:last-child {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.gw-navbar__mobile {
+  position: fixed;
+  inset: 0;
+  top: 0;
+  z-index: 98; /* was 99 — now clearly below the toggle at 101 and header at 100 */
+  background: var(--gw-ivory);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.2rem;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.6s var(--gw-ease), opacity 0.5s var(--gw-ease);
+  visibility: hidden;
+}
+
+.gw-navbar__mobile--open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.gw-navbar__mobile-link {
+  font-family: var(--gw-font-display);
+  font-size: 2rem;
+  color: var(--gw-espresso);
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.5s var(--gw-ease),
+    transform 0.5s var(--gw-ease);
+}
+
+.gw-navbar__mobile--open .gw-navbar__mobile-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 860px) {
+  .gw-navbar {
+    padding: 1.3rem 0;
+  }
+
+  .gw-navbar--scrolled {
+    padding: 0.9rem 0;
+  }
+
+  .gw-navbar__links {
+    display: none;
+  }
+
+  .gw-navbar__toggle {
+    display: flex;
+  }
+}

@@ -1,0 +1,23 @@
+.gw-map-section {
+  width: 100%;
+  background: transparent;
+}
+
+.gw-map-section__frame {
+  display: block;
+  width: 100%;
+  height: 480px;
+  border: 0;
+}
+
+@media (max-width: 860px) {
+  .gw-map-section__frame {
+    height: 380px;
+  }
+}
+
+@media (max-width: 560px) {
+  .gw-map-section__frame {
+    height: 300px;
+  }
+}

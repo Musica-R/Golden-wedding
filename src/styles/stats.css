@@ -1,0 +1,36 @@
+.gw-stats {
+  padding: clamp(3.5rem, 7vw, 6rem) 0;
+  background: var(--gw-espresso);
+}
+
+.gw-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.gw-stats__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.gw-stats__value {
+  font-family: var(--gw-font-display);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  color: var(--gw-gold-light);
+}
+
+.gw-stats__label {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: rgba(250, 246, 238, 0.75);
+}
+
+@media (max-width: 700px) {
+  .gw-stats__grid {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2.5rem;
+  }
+}

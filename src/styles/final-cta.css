@@ -1,0 +1,53 @@
+.gw-final-cta {
+  position: relative;
+  height: 80vh;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gw-final-cta__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.06);
+  animation: gw-hero-zoom 14s var(--gw-ease) forwards;
+}
+
+.gw-final-cta__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 14, 10, 0.35) 0%,
+    rgba(20, 14, 10, 0.55) 100%
+  );
+}
+
+.gw-final-cta__content {
+  position: relative;
+  text-align: center;
+  color: var(--gw-ivory);
+}
+
+.gw-final-cta__title {
+  font-size: clamp(2.4rem, 5.5vw, 4.5rem);
+  color: var(--gw-ivory);
+  line-height: 1.15;
+}
+
+.gw-final-cta__sub {
+  margin-top: 1.6rem;
+  font-size: var(--gw-size-lead);
+  font-weight: 300;
+  color: rgba(250, 246, 238, 0.85);
+}
+
+.gw-final-cta__cta {
+  margin-top: 2.4rem;
+  display: inline-flex;
+}

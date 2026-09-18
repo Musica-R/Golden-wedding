@@ -1,0 +1,114 @@
+.gw-floating-cta {
+  position: fixed;
+  z-index: 95;
+  font-family: var(--gw-font-body);
+  letter-spacing: 0.04em;
+  text-align: center;
+  transition:
+    background 0.35s var(--gw-ease),
+    color 0.35s var(--gw-ease),
+    transform 0.35s var(--gw-ease);
+}
+
+.gw-floating-cta {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(40px) scale(0.96);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0.8s ease;
+}
+
+.gw-floating-cta--visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+  transform: translateY(0) scale(1);
+}
+
+.gw-floating-cta1--desktop {
+  right: 20px;
+  top: 55%;
+  transform: translateY(-50%) rotate(-90deg) translateX(50%);
+  transform-origin: right center;
+
+  background: var(--gw-espresso);
+  color: var(--gw-ivory);
+  font-size: 0.78rem;
+  padding: 0.85rem 1.6rem;
+  border: 1px solid var(--gw-espresso);
+}
+
+.gw-floating-cta2--desktop {
+  right: 20px;
+  bottom: 12%;
+  transform: translateY(-50%) rotate(-90deg) translateX(50%);
+  transform-origin: right center;
+
+  background: #25d366;
+  color: var(--gw-ivory);
+  font-size: 0.78rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid #25d366;
+}
+
+.gw-floating-cta2--desktop svg {
+  transform: rotate(90deg);
+}
+
+.gw-floating-cta3--desktop {
+  right: 20px;
+  bottom: 3%;
+  transform: translateY(-50%) rotate(-90deg) translateX(50%);
+  transform-origin: right center;
+  background: var(--gw-espresso);
+  color: var(--gw-ivory);
+  font-size: 0.78rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--gw-espresso);
+}
+
+.gw-floating-cta1--desktop:hover {
+  background: var(--gw-gold);
+  border-color: var(--gw-gold);
+}
+
+.gw-floating-cta2--desktop:hover {
+  background: var(--gw-gold);
+  border-color: var(--gw-gold);
+}
+
+.gw-floating-cta3--desktop:hover {
+  background: var(--gw-gold);
+  border-color: var(--gw-gold);
+}
+
+.gw-floating-cta--mobile {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .gw-floating-cta1--desktop {
+    display: none;
+  }
+
+  .gw-floating-cta2--desktop {
+    bottom: 15%;
+  }
+  .gw-floating-cta3--desktop {
+    bottom: 6%;
+  }
+  .gw-floating-cta--mobile {
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gw-espresso);
+    color: var(--gw-ivory);
+    padding: 1rem;
+    font-size: 0.85rem;
+  }
+}

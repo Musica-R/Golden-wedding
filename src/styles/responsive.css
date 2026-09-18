@@ -1,0 +1,85 @@
+/*
+ * Global small-screen refinements that don't belong to one component's
+ * own stylesheet. Component files already carry their own breakpoints
+ * (see navbar.css, pricing.css, service-showcase.css, etc.) — this
+ * file adds the extra narrow-phone tweaks and a couple of safety nets
+ * so nothing overflows horizontally on small devices. Loaded last so
+ * it can override where needed.
+ */
+
+/* Prevent any accidental horizontal scroll on small screens. */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Collections grid: two columns is fine down to phone width, but
+   under ~560px a single column reads far better than a cramped pair. */
+@media (max-width: 560px) {
+  .gw-collections__grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 260px;
+  }
+}
+
+/* Instagram grid: three-across gets tight under ~480px. */
+@media (max-width: 480px) {
+  .gw-instagram__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Hero / final CTA: on short landscape phones a full 100vh/80vh
+   section can push the CTA below the fold entirely. */
+@media (max-width: 900px) and (max-height: 480px) {
+  .gw-hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 6rem 0 3rem;
+  }
+  .gw-final-cta {
+    height: auto;
+    min-height: 70vh;
+    padding: 4rem 0;
+  }
+}
+
+/* Section rhythm: tighten the large section paddings a little on
+   phones so scrolling feels proportionate rather than sparse. */
+@media (max-width: 560px) {
+  :root {
+    --gw-section-space: clamp(3rem, 12vw, 5rem);
+  }
+}
+
+/* Wedding-story hero: shorter minimum height on small screens so the
+   title isn't stranded far below the visible image. */
+@media (max-width: 560px) {
+  .gw-wedding-story__hero {
+    min-height: 380px;
+  }
+}
+
+/* Pricing "featured" card lift only makes sense with room either
+   side; flatten it earlier than the grid collapse itself. */
+@media (max-width: 960px) {
+  .gw-pricing__card--featured {
+    transform: none;
+  }
+}
+
+/* Buttons: keep comfortable tap targets and let long CTA labels wrap
+   cleanly instead of stretching the button edge-to-edge. */
+@media (max-width: 480px) {
+  .gw-btn {
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+  }
+  .gw-hero__ctas .gw-btn,
+  .gw-final-cta__cta {
+    width: auto;
+  }
+}
