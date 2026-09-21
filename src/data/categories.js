@@ -1,0 +1,148 @@
+// Category directory for the Golden Wedding marketplace section.
+// Each category links to its own listing page (CategoryDetails) via slug.
+// Images reuse the studio's existing photography library until
+// category-specific photography is shot — swap paths as real assets arrive.
+const categories = [
+  {
+    slug: "outfit",
+    name: "Outfit",
+    image: "/images/portfolio/priya-siddharth-1.webp",
+    description: "Designer ensembles and tailoring for every wedding function.",
+    count: "40+ Curated",
+  },
+  {
+    slug: "jewellery-accessories",
+    name: "Jewellery & Accessories",
+    image: "/images/portfolio/diya-kabir-1.webp",
+    description: "Heirloom-inspired sets, temple jewellery and bridal accents.",
+    count: "35+ Curated",
+  },
+  {
+    slug: "mehndi",
+    name: "Mehndi",
+    image: "/images/collections/floral-wedding.webp",
+    description: "Intricate bridal and party mehndi artists across Kerala.",
+    count: "22+ Artists",
+  },
+  {
+    slug: "decor-ideas",
+    name: "Decor & Ideas",
+    image: "/images/services/wedding-decor.webp",
+    description: "Mandaps, stages and floral installations built around a theme.",
+    count: "50+ Concepts",
+  },
+  {
+    slug: "wedding-card-designs",
+    name: "Wedding Card Designs",
+    image: "/images/misc/statement-1.webp",
+    description: "Traditional, contemporary and digital invitation studios.",
+    count: "18+ Designers",
+  },
+  {
+    slug: "wedding-photography",
+    name: "Wedding Photography",
+    image: "/images/services/photography-coordination.webp",
+    description: "Candid, cinematic and traditional wedding photography teams.",
+    count: "30+ Studios",
+  },
+  {
+    slug: "groom-wear",
+    name: "Groom Wear",
+    image: "/images/portfolio/isha-vikram-1.webp",
+    description: "Sherwanis, bandhgalas and formal wear for the groom's party.",
+    count: "25+ Curated",
+  },
+  {
+    slug: "bridal-makeup-hair",
+    name: "Bridal Makeup & Hair",
+    image: "/images/portfolio/meera-arjun-1.webp",
+    description: "HD, airbrush and traditional bridal make-up specialists.",
+    count: "28+ Artists",
+  },
+  {
+    slug: "photographers",
+    name: "Photographers",
+    image: "/images/portfolio/amara-rohan-1.webp",
+    description: "Independent photographers for pre-wedding and event coverage.",
+    count: "33+ Curated",
+  },
+  {
+    slug: "makeup",
+    name: "Makeup",
+    image: "/images/portfolio/ananya-dev-1.webp",
+    description: "Party, engagement and guest make-up artists on call.",
+    count: "20+ Artists",
+  },
+  {
+    slug: "planning-decor",
+    name: "Planning & Decor",
+    image: "/images/services/wedding-planning.webp",
+    description: "Full-service planners who design, source and execute the day.",
+    count: "15+ Planners",
+  },
+  {
+    slug: "virtual-planning",
+    name: "Virtual Planning",
+    image: "/images/services/destination-wedding-planning.webp",
+    description: "Remote planning and design consultations for out-of-town couples.",
+    count: "10+ Consultants",
+  },
+  {
+    slug: "music-dance",
+    name: "Music & Dance",
+    image: "/images/misc/instagram-3.webp",
+    description: "Live bands, DJs, choreographers and traditional performers.",
+    count: "24+ Curated",
+  },
+  {
+    slug: "invites-gifts",
+    name: "Invites & Gifts",
+    image: "/images/misc/instagram-4.webp",
+    description: "Return gifts, hampers and personalised guest favours.",
+    count: "19+ Curated",
+  },
+  {
+    slug: "food",
+    name: "Food",
+    image: "/images/misc/instagram-5.webp",
+    description: "Caterers and live counters for every regional wedding menu.",
+    count: "27+ Caterers",
+  },
+  {
+    slug: "pre-wedding-shoot",
+    name: "Pre Wedding Shoot",
+    image: "/images/portfolio/priya-siddharth-2.webp",
+    description: "Location and concept-led pre-wedding photography packages.",
+    count: "21+ Studios",
+  },
+  {
+    slug: "bridal-wear",
+    name: "Bridal Wear",
+    image: "/images/portfolio/diya-kabir-2.webp",
+    description: "Bridal lehengas, sarees and gowns from trusted boutiques.",
+    count: "38+ Curated",
+  },
+  {
+    slug: "pandits",
+    name: "Pandits",
+    image: "/images/collections/traditional-south-indian.webp",
+    description: "Experienced priests for rituals across regional traditions.",
+    count: "14+ Curated",
+  },
+  {
+    slug: "bridal-grooming",
+    name: "Bridal Grooming",
+    image: "/images/portfolio/meera-arjun-2.webp",
+    description: "Pre-wedding skin, hair and wellness packages for the bride.",
+    count: "17+ Studios",
+  },
+  {
+    slug: "post-wedding-shoot",
+    name: "Post Wedding Shoot",
+    image: "/images/services/photography-coordination.webp",
+    description: "Location and concept-led post-wedding photography packages.",
+    count: "21+ Studios",
+  },
+];
+
+export default categories;

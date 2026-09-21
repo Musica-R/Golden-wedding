@@ -11,6 +11,28 @@
   align-items: start;
 }
 
+/* CTA variant — used on every page except /contact, where the button
+   replaces the embedded form so visitors land on one dedicated page. */
+.gw-contact__grid--cta {
+  grid-template-columns: 1fr;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gw-contact__grid--cta .gw-contact__intro-body {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gw-contact__grid--cta .gw-contact__detail {
+  align-items: center;
+}
+
+.gw-contact__cta {
+  margin-top: 2.2rem;
+}
+
 .gw-contact__intro-body {
   margin-top: 1.4rem;
   color: rgba(250, 246, 238, 0.75);

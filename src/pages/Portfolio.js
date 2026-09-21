@@ -22,7 +22,7 @@ export default function Portfolio() {
             <h1 className="gw-portfolio-page__title">Stories We've Been Trusted With</h1>
             <hr className="gw-divider" />
             <p className="gw-portfolio-page__lead">
-              A collection of celebrations from across India — each one
+              A collection of celebrations from across Kerala — each one
               designed around its own place, family and season.
             </p>
           </ScrollReveal>

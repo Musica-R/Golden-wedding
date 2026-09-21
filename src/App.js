@@ -12,6 +12,10 @@ import Collections from "./pages/Collections";
 import Portfolio from "./pages/Portfolio";
 import WeddingStory from "./pages/WeddingStory";
 import Contact from "./pages/Contact";
+import CategoriesPage from "./pages/Categories";
+import CategoryDetailsPage from "./pages/CategoryDetails";
+import ListingDetailsPage from "./pages/ListingDetails";
+import GalleryPage from "./pages/Gallery";
 
 const SPLASH_SESSION_KEY = "gw-splash-seen";
 
@@ -51,6 +55,10 @@ export default function App() {
           <Route path="/collections" element={<Collections />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/portfolio/:slug" element={<WeddingStory />} />
+          <Route path="/categories" element={<CategoriesPage />} />
+          <Route path="/categories/:slug" element={<CategoryDetailsPage />} />
+          <Route path="/categories/:slug/:listingId" element={<ListingDetailsPage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

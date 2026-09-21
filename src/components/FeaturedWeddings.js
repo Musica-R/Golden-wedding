@@ -13,9 +13,9 @@ export default function FeaturedWeddings({ limit = 3 }) {
       <div className="gw-container">
         <div className="gw-featured__head">
           <SectionHeading eyebrow="Portfolio" title="Featured Weddings" />
-          <Link to="/portfolio" className="gw-featured__all">
+          {/* <Link to="/portfolio" className="gw-featured__all">
             View All Stories
-          </Link>
+          </Link> */}
         </div>
 
         <div className="gw-featured__grid">
@@ -23,6 +23,15 @@ export default function FeaturedWeddings({ limit = 3 }) {
             <WeddingCard wedding={wedding} delay={i * 120} key={wedding.slug} />
           ))}
         </div>
+      </div>
+      <div className="gw-container gw-gallery__more">
+        <Link
+          to="/portfolio"
+          className="gw-btn gw-btn--gold"
+          style={{ color: "black" }}
+        >
+          View All Stories &rarr;
+        </Link>
       </div>
     </section>
   );

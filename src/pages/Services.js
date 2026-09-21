@@ -2,7 +2,7 @@ import React from "react";
 import ScrollReveal from "../components/ScrollReveal";
 import Services from "../components/Services";
 import Pricing from "../components/Pricing";
-import ContactSection from "../components/ContactSection";
+// import ContactSection from "../components/ContactSection";
 import "../styles/services-page.css";
 
 export default function ServicesPage() {

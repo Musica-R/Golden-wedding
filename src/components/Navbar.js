@@ -7,7 +7,9 @@ const links = [
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
   { to: "/collections", label: "Collections" },
+  { to: "/categories", label: "Categories" },
   { to: "/portfolio", label: "Portfolio" },
+  { to: "/gallery", label: "Gallery" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -29,7 +31,7 @@ export default function Navbar() {
     <header className={`gw-navbar ${scrolled ? "gw-navbar--scrolled" : ""}`}>
       <div className="gw-navbar__inner gw-container">
         <Link to="/" className="gw-navbar__mark" onClick={() => setMenuOpen(false)}>
-          Golden Wedding
+          Golden Wedding Company
         </Link>
 
         <nav className="gw-navbar__links">
@@ -61,21 +63,58 @@ export default function Navbar() {
       </div>
 
       <div
+        className={`gw-navbar__overlay ${menuOpen ? "gw-navbar__overlay--open" : ""}`}
+        onClick={() => setMenuOpen(false)}
+        aria-hidden="true"
+      />
+
+      <div
         id="gw-navbar-mobile-menu"
         className={`gw-navbar__mobile ${menuOpen ? "gw-navbar__mobile--open" : ""}`}
       >
-        {links.map((link, i) => (
-          <NavLink
-            key={link.to}
-            to={link.to}
-            end={link.to === "/"}
-            style={{ transitionDelay: `${i * 60}ms` }}
-            className="gw-navbar__mobile-link"
+        <div className="gw-navbar__mobile-head">
+          <span className="gw-navbar__mobile-mark">Golden Wedding Company</span>
+          <button
+            className="gw-navbar__mobile-close"
+            aria-label="Close menu"
             onClick={() => setMenuOpen(false)}
           >
-            {link.label}
-          </NavLink>
-        ))}
+            &times;
+          </button>
+        </div>
+
+        <nav className="gw-navbar__mobile-links">
+          {links.map((link, i) => (
+            <NavLink
+              key={link.to}
+              to={link.to}
+              end={link.to === "/"}
+              style={{ transitionDelay: `${i * 50}ms` }}
+              className={({ isActive }) =>
+                `gw-navbar__mobile-link ${isActive ? "gw-navbar__mobile-link--active" : ""}`
+              }
+              onClick={() => setMenuOpen(false)}
+            >
+              {/* <span className="gw-navbar__mobile-link-index">
+                {String(i + 1).padStart(2, "0")}
+              </span> */}
+              <span className="gw-navbar__mobile-link-label">{link.label}</span>
+            </NavLink>
+          ))}
+        </nav>
+
+        <div className="gw-navbar__mobile-foot">
+          {/* <a href="tel:+918714542030" className="gw-navbar__mobile-phone">
+            +91 87145 42030
+          </a> */}
+          <Link
+            to="/contact"
+            className="gw-btn gw-btn--gold gw-navbar__mobile-cta"
+            onClick={() => setMenuOpen(false)}
+          >
+            Get in Touch &rarr;
+          </Link>
+        </div>
       </div>
     </header>
   );

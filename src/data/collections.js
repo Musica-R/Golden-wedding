@@ -7,7 +7,7 @@ const collections = [
     name: "Traditional South Indian Wedding",
     description:
       "Temple-inspired mandaps, banana leaf motifs and jasmine in every corner — ceremony design rooted in ritual.",
-    location: "Chennai, Madurai, Coimbatore",
+    location: "Kochi, Thrissur, Guruvayur",
     eventType: "Traditional Ceremony",
     image: "/images/collections/traditional-south-indian.webp",
     size: "tall",
@@ -17,7 +17,7 @@ const collections = [
     name: "Royal Wedding",
     description:
       "Palace courtyards, hand-painted frescoes and décor built to match centuries of architecture.",
-    location: "Jaipur, Udaipur",
+    location: "Kochi, Thiruvananthapuram",
     eventType: "Palace Celebration",
     image: "/images/collections/royal-wedding.webp",
     size: "wide",
@@ -27,7 +27,7 @@ const collections = [
     name: "Contemporary Wedding",
     description:
       "Clean lines, sculptural florals and a modern palette for couples who want tradition, reimagined.",
-    location: "Mumbai, Delhi, Bengaluru",
+    location: "Kochi, Thiruvananthapuram, Kozhikode",
     eventType: "Modern Ceremony",
     image: "/images/collections/contemporary-wedding.webp",
     size: "square",
@@ -37,7 +37,7 @@ const collections = [
     name: "Floral Wedding",
     description:
       "Hand-tied garlands, floating installations and canopies built entirely from fresh seasonal blooms.",
-    location: "Bengaluru, Ooty",
+    location: "Munnar, Wayanad",
     eventType: "Floral Design",
     image: "/images/collections/floral-wedding.webp",
     size: "tall",
@@ -46,7 +46,7 @@ const collections = [
     slug: "destination-wedding",
     name: "Destination Wedding",
     description:
-      "Full logistics and local sourcing for celebrations in Kerala and beyond — design built for the setting.",
+      "Full logistics and local sourcing for celebrations across Kerala's backwaters, hills and coast — design built for the setting.",
     location: "Kerala",
     eventType: "Destination",
     image: "/images/collections/destination-wedding.webp",
@@ -89,7 +89,7 @@ const collections = [
     name: "Floral Canopy",
     description:
       "A romantic ceremony canopy overflowing with fresh seasonal flowers and delicate greenery.",
-    location: "Ooty",
+    location: "Munnar",
     eventType: "Floral Ceremony",
     image: "/images/collections/50.jpg",
     size: "tall",
@@ -101,7 +101,7 @@ const collections = [
     name: "Blooming Entrance",
     description:
       "A dramatic entrance installation created with layers of seasonal flowers and natural foliage.",
-    location: "Bengaluru",
+    location: "Kochi",
     eventType: "Wedding Entrance",
     image: "/images/collections/51.webp",
     size: "wide",
@@ -113,7 +113,7 @@ const collections = [
     name: "Floating Florals",
     description:
       "Suspended floral arrangements creating an immersive overhead installation for the celebration.",
-    location: "Ooty",
+    location: "Wayanad",
     eventType: "Floral Installation",
     image: "/images/collections/52.webp",
     size: "square",
@@ -125,7 +125,7 @@ const collections = [
     name: "Floral Tablescape",
     description:
       "An elegant dining setup featuring hand-tied blooms, candles and seasonal foliage.",
-    location: "Bengaluru",
+    location: "Kozhikode",
     eventType: "Reception",
     image: "/images/collections/53.webp",
     size: "tall",
@@ -193,7 +193,7 @@ const collections = [
     name: "Garden Ceremony",
     description:
       "A private garden ceremony designed with intimate floral arrangements and warm natural details.",
-    location: "Coimbatore",
+    location: "Thekkady",
     eventType: "Intimate Ceremony",
     image: "/images/collections/58.webp",
     size: "square",
@@ -205,7 +205,7 @@ const collections = [
     name: "Private Vows",
     description:
       "A quiet ceremony setting designed to feel personal, warm and deeply connected.",
-    location: "Ooty",
+    location: "Munnar",
     eventType: "Private Ceremony",
     image: "/images/collections/59.webp",
     size: "tall",
@@ -217,7 +217,7 @@ const collections = [
     name: "Family Tablescape",
     description:
       "A close-knit dining experience styled around natural textures and delicate florals.",
-    location: "Bengaluru",
+    location: "Kottayam",
     eventType: "Private Reception",
     image: "/images/collections/60.webp",
     size: "wide",
@@ -229,7 +229,7 @@ const collections = [
     name: "Evening Garden",
     description:
       "A softly illuminated garden celebration created for a small gathering of family and friends.",
-    location: "Coimbatore",
+    location: "Wayanad",
     eventType: "Evening Celebration",
     image: "/images/collections/61.webp",
     size: "square",

@@ -1,0 +1,215 @@
+.gw-wgallery {
+  padding: var(--gw-gutter) 0;
+  background: var(--gw-ivory);
+}
+
+/* Filter chips — rounded photo with the category name underneath,
+   horizontally scrollable so they never overflow on mobile */
+.gw-gfilter {
+  display: flex;
+  gap: clamp(1rem, 2.4vw, 1.6rem);
+  overflow-x: auto;
+  padding: 0.3rem 0.2rem 0.6rem;
+  margin-bottom: clamp(1.8rem, 3vw, 2.6rem);
+  /* scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch; */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.gw-gfilter__pill {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  width: 84px;
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: var(--gw-font-body);
+  color: var(--gw-espresso-soft);
+  cursor: pointer;
+}
+
+.gw-gfilter__thumb {
+  display: block;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid transparent;
+  box-shadow: 0 8px 20px -12px rgba(42, 33, 28, 0.4);
+  transition:
+    border-color 0.3s var(--gw-ease),
+    transform 0.3s var(--gw-ease);
+}
+
+.gw-gfilter__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gw-gfilter__label {
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  text-align: center;
+  line-height: 1.25;
+  transition:
+    color 0.3s var(--gw-ease),
+    font-weight 0.3s var(--gw-ease);
+}
+
+.gw-gfilter__pill:hover .gw-gfilter__thumb {
+  border-color: var(--gw-gold-light);
+  transform: translateY(-2px);
+}
+
+.gw-gfilter__pill:hover .gw-gfilter__label {
+  color: var(--gw-gold-deep);
+}
+
+.gw-gfilter__pill--active .gw-gfilter__thumb {
+  border-color: var(--gw-gold);
+}
+
+.gw-gfilter__pill--active .gw-gfilter__label {
+  color: var(--gw-gold-deep);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .gw-gfilter__pill {
+    width: 68px;
+  }
+  .gw-gfilter__thumb {
+    width: 60px;
+    height: 60px;
+  }
+  .gw-gfilter__label {
+    font-size: 0.68rem;
+  }
+}
+
+/* Editorial masonry grid — CSS columns keep natural image proportions */
+.gw-wgallery__grid {
+  column-count: 4;
+  column-gap: clamp(0.9rem, 2vw, 1.2rem);
+  animation: gw-wgallery-fade 0.5s var(--gw-ease);
+}
+
+@keyframes gw-wgallery-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.gw-wgallery__item {
+  break-inside: avoid;
+  margin-bottom: clamp(0.9rem, 2vw, 1.2rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.gw-wgallery__button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.gw-wgallery__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 1.1s var(--gw-ease);
+}
+
+.gw-wgallery__item:hover .gw-wgallery__image {
+  transform: scale(1.06);
+}
+
+.gw-wgallery__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.1rem 1.1rem;
+  background: linear-gradient(0deg, rgba(20, 14, 10, 0.7), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.5s var(--gw-ease);
+}
+
+.gw-wgallery__item:hover .gw-wgallery__overlay {
+  opacity: 1;
+}
+
+.gw-wgallery__label {
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--gw-espresso);
+  background: var(--gw-gold-light);
+}
+
+.gw-wgallery__caption {
+  color: var(--gw-ivory);
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+
+.gw-lightbox__tag {
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--gw-espresso);
+  background: var(--gw-gold-light);
+}
+
+@media (max-width: 1080px) {
+  .gw-wgallery__grid {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 760px) {
+  .gw-wgallery__grid {
+    column-count: 2;
+  }
+  .gw-wgallery__overlay {
+    opacity: 1;
+    background: linear-gradient(0deg, rgba(20, 14, 10, 0.55), transparent 65%);
+  }
+}
+
+@media (max-width: 420px) {
+  .gw-wgallery__grid {
+    column-gap: 0.7rem;
+  }
+}
+
+/* Reduce heavy motion on touch/small screens */
+@media (max-width: 760px), (hover: none) {
+  .gw-wgallery__image {
+    transition: transform 0.4s var(--gw-ease);
+  }
+  .gw-wgallery__item:hover .gw-wgallery__image {
+    transform: none;
+  }
+}

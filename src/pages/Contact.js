@@ -27,7 +27,7 @@ export default function Contact() {
           </ScrollReveal>
         </div>
       </section>
-      <ContactSection />
+      <ContactSection showForm />
       <MapSection />
     </div>
   );

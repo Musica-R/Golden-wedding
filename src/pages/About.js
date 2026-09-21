@@ -3,7 +3,7 @@ import ScrollReveal from "../components/ScrollReveal";
 import SectionHeading from "../components/SectionHeading";
 import ProcessSection from "../components/ProcessSection";
 import StatsSection from "../components/StatsSection";
-import ContactSection from "../components/ContactSection";
+// import ContactSection from "../components/ContactSection";
 import "../styles/about.css";
 
 export default function About() {
@@ -37,7 +37,7 @@ export default function About() {
           <ScrollReveal delay={150}>
             <p className="gw-eyebrow">Our Beginning</p>
             <h2 className="gw-about__story-title">
-              Founded in Jaipur, built for every kind of Indian wedding.
+              Founded in Palakkad, built for every kind of Kerala wedding.
             </h2>
             <hr className="gw-divider" />
             <p className="gw-about__story-body">
@@ -45,8 +45,8 @@ export default function About() {
               a single lakeside wedding and a belief that décor
               should serve the story, not compete with it. What started as
               a small floral and styling practice has grown into a
-              full-service design studio, working across palaces, havelis,
-              beaches and private gardens throughout India and beyond.
+              full-service design studio, working across backwater resorts,
+              heritage homes, beaches and private gardens throughout Kerala.
             </p>
             <p className="gw-about__story-body">
               We remain intentionally selective — a limited number of

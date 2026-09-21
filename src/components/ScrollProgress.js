@@ -30,7 +30,7 @@ export default function ScrollProgress() {
     };
   }, []);
 
-  const displayPct = String(Math.round(progress)).padStart(2, "0");
+  // const displayPct = String(Math.round(progress)).padStart(2, "0");
 
   return (
     <div className="gw-scroll-progress" aria-hidden="true">

@@ -1,21 +1,27 @@
 import React, { useCallback, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
 import SectionHeading from "./SectionHeading";
 import gallery from "../data/gallery";
 import "../styles/gallery.css";
 
-export default function PortfolioGallery() {
+export default function PortfolioGallery({ limit = 8 }) {
+  const items = limit ? gallery.slice(0, limit) : gallery;
+
   const [activeIndex, setActiveIndex] = useState(null);
   const isOpen = activeIndex !== null;
 
   const close = useCallback(() => setActiveIndex(null), []);
   const showNext = useCallback(
-    () => setActiveIndex((i) => (i === null ? null : (i + 1) % gallery.length)),
-    []
+    () => setActiveIndex((i) => (i === null ? null : (i + 1) % items.length)),
+    [items.length],
   );
   const showPrev = useCallback(
-    () => setActiveIndex((i) => (i === null ? null : (i - 1 + gallery.length) % gallery.length)),
-    []
+    () =>
+      setActiveIndex((i) =>
+        i === null ? null : (i - 1 + items.length) % items.length,
+      ),
+    [items.length],
   );
 
   useEffect(() => {
@@ -46,7 +52,7 @@ export default function PortfolioGallery() {
       </div>
 
       <div className="gw-container gw-gallery__grid">
-        {gallery.map((img, i) => (
+        {items.map((img, i) => (
           <ScrollReveal
             key={img.caption}
             delay={(i % 3) * 100}
@@ -70,6 +76,12 @@ export default function PortfolioGallery() {
         ))}
       </div>
 
+      <div className="gw-container gw-gallery__more">
+        <Link to="/gallery" className="gw-btn gw-btn--gold" style={{color:'black'}}>
+          Explore Gallery &rarr;
+        </Link>
+      </div>
+
       {isOpen && (
         <div className="gw-lightbox" role="dialog" aria-modal="true">
           <button
@@ -88,12 +100,13 @@ export default function PortfolioGallery() {
           </button>
           <figure className="gw-lightbox__figure">
             <img
-              src={gallery[activeIndex].full}
-              alt={gallery[activeIndex].caption}
+              src={items[activeIndex].full}
+              alt={items[activeIndex].caption}
               className="gw-lightbox__image"
             />
             <figcaption className="gw-lightbox__caption">
-              {gallery[activeIndex].caption} &middot; {activeIndex + 1} / {gallery.length}
+              {items[activeIndex].caption} &middot; {activeIndex + 1} /{" "}
+              {items.length}
             </figcaption>
           </figure>
           <button

@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import IntroSection from "../components/IntroSection";
 import Collections from "../components/Collections";
 import Services from "../components/Services";
+import Categories from "../components/Categories/Categories";
 import FeaturedWeddings from "../components/FeaturedWeddings";
 import PortfolioGallery from "../components/PortfolioGallery";
 import ProcessSection from "../components/ProcessSection";
@@ -12,7 +13,7 @@ import SignatureStatement from "../components/SignatureStatement";
 import Testimonial from "../components/Testimonial";
 import InstagramGallery from "../components/InstagramGallery";
 import FinalCTA from "../components/FinalCTA";
-import ContactSection from "../components/ContactSection";
+// import ContactSection from "../components/ContactSection";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         lines={["It's not just a venue.", "It's the beginning of your story."]}
       />
       <Services limit={4} explore={true} />
+      <Categories limit={8} />
       <FeaturedWeddings limit={3} />
       <PortfolioGallery />
       <ProcessSection />
@@ -35,7 +37,7 @@ export default function Home() {
       <Testimonial />
       <InstagramGallery />
       <FinalCTA />
-      <ContactSection />
+      {/* <ContactSection /> */}
     </>
   );
 }

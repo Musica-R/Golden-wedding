@@ -3,9 +3,9 @@
 // not intended to name the real couples pictured.
 const weddings = [
   {
-    slug: "amara-rohan-udaipur",
+    slug: "amara-rohan-kumarakom",
     title: "Amara & Rohan",
-    location: "Udaipur, Rajasthan",
+    location: "Kumarakom, Kerala",
     eventType: "Lakeside Wedding",
     year: "2025",
     cover: "/images/portfolio/amara-rohan-cover.webp",
@@ -20,9 +20,9 @@ const weddings = [
       "The brief called for scale without losing warmth. We built a floor-to-ceiling gold mandap framed in hand-carved pillars, with a wall of blush and ivory blooms cascading from the canopy. Traditional brass lamps and fruit offerings anchored the ceremony space, while the reception moved into a matching palette of gold and antique rose.",
   },
   {
-    slug: "meera-arjun-jaipur",
+    slug: "meera-arjun-kochi",
     title: "Meera & Arjun",
-    location: "Jaipur, Rajasthan",
+    location: "Kochi, Kerala",
     eventType: "Convention Centre Wedding",
     year: "2024",
     cover: "/images/portfolio/meera-arjun-cover.webp",
@@ -37,9 +37,9 @@ const weddings = [
       "Meera wanted the hall to feel unrecognisable from its usual self. We built a floral proscenium of pink and ivory roses framing a carved gold Ganesh backdrop, with hanging strands of jasmine and bougainvillea threaded through brass bells. Every pillar was dressed floor to ceiling, so nothing of the original room showed through.",
   },
   {
-    slug: "isha-vikram-goa",
+    slug: "isha-vikram-kovalam",
     title: "Isha & Vikram",
-    location: "Goa",
+    location: "Kovalam, Kerala",
     eventType: "Poolside Reception",
     year: "2024",
     cover: "/images/portfolio/isha-vikram-cover.webp",
@@ -54,9 +54,9 @@ const weddings = [
       "For a poolside reception, we built a fully clear-roofed marquee so the evening sky stayed part of the room, hung with crystal chandeliers and blush drapery down every column. Floating lanterns on the water picked up the reflection of the stage, and the aisle ran directly alongside the pool's edge for the ceremony.",
   },
   {
-    slug: "diya-kabir-delhi",
+    slug: "diya-kabir-guruvayur",
     title: "Diya & Kabir",
-    location: "New Delhi",
+    location: "Guruvayur, Kerala",
     eventType: "Temple-Style Ceremony",
     year: "2023",
     cover: "/images/portfolio/diya-kabir-cover.webp",
@@ -71,10 +71,10 @@ const weddings = [
       "Diya wanted the ceremony to feel rooted in ritual. We designed a carved gold temple facade as the backdrop, set against a living green wall, with rows of traditional brass oil lamps lining the approach. Banana leaf place settings and fresh fruit offerings completed the ceremony space in the old style, done properly.",
   },
   {
-    slug: "priya-siddharth-udaipur",
+    slug: "priya-siddharth-alleppey",
     title: "Priya & Siddharth",
-    location: "Udaipur, Rajasthan",
-    eventType: "Riverside Mehendi",
+    location: "Alleppey, Kerala",
+    eventType: "Backwater Mehendi",
     year: "2023",
     cover: "/images/portfolio/priya-siddharth-cover.webp",
     gallery: [
@@ -83,14 +83,14 @@ const weddings = [
       "/images/portfolio/priya-siddharth-3.webp",
     ],
     story:
-      "A riverside pandal in fuchsia and marigold silk, with a hand-strung floral canopy over the mehendi seating.",
+      "A backwater-side pandal in fuchsia and marigold silk, with a hand-strung floral canopy over the mehendi seating.",
     fullStory:
-      "Set on the edge of the water, this pandal used bold pink and marigold drapery against the tiled roof of a traditional pavilion. We strung marigold garlands across the entrance and built a low stage for the mehendi seating, so the couple stayed at the centre of the celebration rather than raised above it.",
+      "Set on the edge of the backwaters, this pandal used bold pink and marigold drapery against the tiled roof of a traditional Kerala pavilion. We strung marigold garlands across the entrance and built a low stage for the mehendi seating, so the couple stayed at the centre of the celebration rather than raised above it.",
   },
   {
-    slug: "ananya-dev-mumbai",
+    slug: "ananya-dev-thiruvananthapuram",
     title: "Ananya & Dev",
-    location: "Mumbai, Maharashtra",
+    location: "Thiruvananthapuram, Kerala",
     eventType: "Contemporary Reception",
     year: "2022",
     cover: "/images/portfolio/ananya-dev-cover.webp",

@@ -1,7 +1,7 @@
 import React from "react";
 import ScrollReveal from "../components/ScrollReveal";
 import Collections from "../components/Collections";
-import ContactSection from "../components/ContactSection";
+// import ContactSection from "../components/ContactSection";
 import "../styles/collections-page.css";
 
 export default function CollectionsPage() {

@@ -85,7 +85,7 @@ const services = [
     slug: "destination-wedding-planning",
     title: "Destination Wedding Planning",
     description:
-      "From Kerala to Goa and beyond — full logistics, local sourcing and design built for the setting.",
+      "From backwater resorts to hill-station retreats — full logistics and local sourcing across Kerala, built for the setting.",
     image: "/images/services/destination-wedding-planning.webp",
     startingPrice: "₹2,00,000",
   },

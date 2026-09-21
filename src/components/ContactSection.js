@@ -1,12 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
 import ContactForm from "./ContactForm";
 import "../styles/contact.css";
 
-export default function ContactSection() {
+export default function ContactSection({ showForm = false }) {
   return (
     <section className="gw-contact" id="contact">
-      <div className="gw-container gw-contact__grid">
+      <div
+        className={`gw-container gw-contact__grid ${
+          showForm ? "" : "gw-contact__grid--cta"
+        }`}
+      >
         <ScrollReveal>
           <p className="gw-eyebrow">Enquire</p>
           <h2 className="gw-intro__headline" style={{ color: "var(--gw-ivory)" }}>
@@ -26,11 +31,19 @@ export default function ContactSection() {
             </span>
             <span>Open daily &middot; 9 am–8 pm</span>
           </div>
+
+          {!showForm && (
+            <Link to="/contact" className="gw-btn gw-btn--gold gw-contact__cta">
+              Get in Touch &rarr;
+            </Link>
+          )}
         </ScrollReveal>
 
-        <ScrollReveal delay={150}>
-          <ContactForm />
-        </ScrollReveal>
+        {showForm && (
+          <ScrollReveal delay={150}>
+            <ContactForm />
+          </ScrollReveal>
+        )}
       </div>
     </section>
   );

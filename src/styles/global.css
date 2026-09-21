@@ -95,6 +95,18 @@ ul {
   margin-right: auto;
 }
 
+.gw-page-intro {
+  padding-top: clamp(2.2rem, 5vw, 3.2rem);
+}
+
+.gw-page-intro__text {
+  max-width: 60ch;
+  margin: 0 auto;
+  text-align: center;
+  font-size: var(--gw-size-lead);
+  color: var(--gw-espresso-soft);
+}
+
 .gw-btn {
   display: inline-flex;
   align-items: center;

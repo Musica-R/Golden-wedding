@@ -26,9 +26,9 @@ export default function IntroSection() {
           </h2>
           <hr className="gw-divider" />
           <p className="gw-intro__body">
-            We are a bespoke wedding design studio working across India's
-            most storied venues — palaces, havelis, lakesides and private
-            gardens. Our practice sits at the intersection of architecture,
+            We are a bespoke wedding design studio working across Kerala's
+            most storied venues — backwater resorts, heritage homes, lakesides
+            and private gardens. Our practice sits at the intersection of architecture,
             floristry and event craft, with every celebration built from
             the ground up around the couple, the site and the season.
           </p>
