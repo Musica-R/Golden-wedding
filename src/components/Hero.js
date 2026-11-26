@@ -4,19 +4,19 @@ import "../styles/hero.css";
 
 const SLIDES = [
   {
-    image: "/images/hero/hero-grand-mandap.webp",
+    image: "/assets/image1.webp",
     alt: "Grand ivory and gold wedding mandap with hanging floral canopy",
   },
   {
-    image: "/images/hero/aisle-modern-white-gold.webp",
+    image: "/assets/image2.webp",
     alt: "Modern white and gold wedding aisle styled with florals",
   },
   {
-    image: "/images/misc/statement-2-entrance.webp",
+    image: "/assets/image3.webp",
     alt: "Grand floral-dressed venue entrance",
   },
   {
-    image: "/images/services/stage-decoration.webp",
+    image: "/assets/image4.webp",
     alt: "Ornate traditional wedding stage decoration",
   },
 ];

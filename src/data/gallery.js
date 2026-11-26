@@ -7,15 +7,15 @@
 // which simply ignores the extra field.
 
 export const GALLERY_CATEGORIES = [
-  { slug: "all", label: "All", image: "/images/gallery/gallery-1-tall.webp" },
-  { slug: "bridal", label: "Bridal", image: "/images/portfolio/priya-siddharth-1.webp" },
-  { slug: "groom", label: "Groom", image: "/images/portfolio/isha-vikram-1.webp" },
+  { slug: "all", label: "All", image: "/golden-images-2/golden99.webp" },
+  { slug: "bridal", label: "Bridal", image: "/golden-images-2/golden92.webp" },
+  { slug: "groom", label: "Groom", image: "/golden-images-2/golden94.webp" },
   { slug: "decor", label: "Wedding Decor", image: "/images/services/wedding-decor.webp" },
   { slug: "mandap", label: "Mandap", image: "/images/services/mandap-design.webp" },
   { slug: "reception", label: "Reception", image: "/images/services/reception-styling.webp" },
   { slug: "engagement", label: "Engagement", image: "/images/collections/engagement-ceremony.webp" },
-  { slug: "mehndi", label: "Mehndi", image: "/images/collections/floral-wedding.webp" },
-  { slug: "haldi", label: "Haldi", image: "/images/misc/instagram-1.webp" },
+  { slug: "mehndi", label: "Mehndi", image: "/assets/mendhi3.jpg" },
+  { slug: "haldi", label: "Haldi", image: "/golden-images-2/golden80.webp" },
   { slug: "photography", label: "Wedding Photography", image: "/images/services/photography-coordination.webp" },
   { slug: "floral", label: "Floral Decor", image: "/images/services/floral-design.webp" },
   { slug: "stage", label: "Stage Decor", image: "/images/services/stage-decoration.webp" },
@@ -25,29 +25,29 @@ export const GALLERY_CATEGORIES = [
 const gallery = [
   // --- Original studio gallery (kept exactly as before, category added) ---
   {
-    src: "/images/gallery/gallery-1-tall.webp",
-    full: "/images/gallery/gallery-1-tall.webp",
+    src: "/golden-images-2/golden29.webp",
+    full: "/golden-images-2/golden29.webp",
     caption: "Welcome signage, garden ceremony",
     size: "tall",
     category: "decor",
   },
   {
-    src: "/images/gallery/gallery-2-wide.webp",
-    full: "/images/gallery/gallery-2-wide.webp",
+    src: "/golden-images-1/golden21.webp",
+    full: "/golden-images-1/golden21.webp",
     caption: "Ceremony aisle, modern white & gold",
     size: "wide",
     category: "venues",
   },
   {
-    src: "/images/gallery/gallery-3-square.webp",
-    full: "/images/gallery/gallery-3-square.webp",
+    src: "/golden-images-1/golden25.webp",
+    full: "/golden-images-1/golden25.webp",
     caption: "Floral hoop wedding cake",
     size: "square",
     category: "reception",
   },
   {
-    src: "/images/gallery/gallery-4-tall.webp",
-    full: "/images/gallery/gallery-4-tall.webp",
+    src: "/golden-images-1/golden5.webp",
+    full: "/golden-images-1/golden5.webp",
     caption: "Floral stand detail",
     size: "tall",
     category: "floral",
@@ -60,8 +60,8 @@ const gallery = [
     category: "stage",
   },
   {
-    src: "/images/gallery/gallery-6-wide.webp",
-    full: "/images/gallery/gallery-6-wide.webp",
+    src: "/golden-images-1/golden13.webp",
+    full: "/golden-images-1/golden13.webp",
     caption: "Hanging floral ceremony arch",
     size: "wide",
     category: "mandap",
@@ -74,8 +74,8 @@ const gallery = [
     category: "stage",
   },
   {
-    src: "/images/gallery/gallery-8-tall.webp",
-    full: "/images/gallery/gallery-8-tall.webp",
+    src: "/golden-images-2/golden34.webp",
+    full: "/golden-images-2/golden34.webp",
     caption: "Traditional brass lamp ritual",
     size: "tall",
     category: "haldi",
@@ -83,22 +83,22 @@ const gallery = [
 
   // --- Bridal ---
   {
-    src: "/images/portfolio/priya-siddharth-1.webp",
-    full: "/images/portfolio/priya-siddharth-1.webp",
+    src: "/golden-images-2/golden94.webp",
+    full: "/golden-images-2/golden94.webp",
     caption: "Bridal portrait, temple silk saree",
     size: "tall",
     category: "bridal",
   },
   {
-    src: "/images/portfolio/diya-kabir-1.webp",
-    full: "/images/portfolio/diya-kabir-1.webp",
+    src: "/golden-images-2/golden84.webp",
+    full: "/golden-images-2/golden84.webp",
     caption: "Bride at the mandap, temple ceremony",
     size: "square",
     category: "bridal",
   },
   {
-    src: "/images/portfolio/meera-arjun-1.webp",
-    full: "/images/portfolio/meera-arjun-1.webp",
+    src: "/golden-images-2/golden88.webp",
+    full: "/golden-images-2/golden88.webp",
     caption: "Bridal jewellery and floral detailing",
     size: "wide",
     category: "bridal",
@@ -106,22 +106,22 @@ const gallery = [
 
   // --- Groom ---
   {
-    src: "/images/portfolio/isha-vikram-1.webp",
-    full: "/images/portfolio/isha-vikram-1.webp",
+    src: "/golden-images-2/golden31.webp",
+    full: "/golden-images-2/golden31.webp",
     caption: "Groom's entry, poolside reception",
     size: "square",
     category: "groom",
   },
   {
-    src: "/images/portfolio/amara-rohan-2.webp",
-    full: "/images/portfolio/amara-rohan-2.webp",
+    src: "/golden-images-2/golden80.webp",
+    full: "/golden-images-2/golden80.webp",
     caption: "Groom at the gold mandap",
     size: "tall",
     category: "groom",
   },
   {
-    src: "/images/portfolio/ananya-dev-2.webp",
-    full: "/images/portfolio/ananya-dev-2.webp",
+    src: "/golden-images-2/golden28.webp",
+    full: "/golden-images-2/golden28.webp",
     caption: "Groom's party, traditional attire",
     size: "wide",
     category: "groom",
@@ -129,22 +129,22 @@ const gallery = [
 
   // --- Wedding Decor ---
   {
-    src: "/images/services/wedding-decor.webp",
-    full: "/images/services/wedding-decor.webp",
+    src: "/golden-images-2/golden91.webp",
+    full: "/golden-images-2/golden91.webp",
     caption: "Full-venue decor styling",
     size: "wide",
     category: "decor",
   },
   {
-    src: "/images/services/entrance-decor.webp",
-    full: "/images/services/entrance-decor.webp",
+    src: "/golden-images-2/golden38.webp",
+    full: "/golden-images-2/golden38.webp",
     caption: "Floral entrance installation",
     size: "square",
     category: "decor",
   },
   {
-    src: "/images/services/lighting-ambience.webp",
-    full: "/images/services/lighting-ambience.webp",
+    src: "/golden-images-2/golden52.webp",
+    full: "/golden-images-2/golden52.webp",
     caption: "Warm lighting design, evening ceremony",
     size: "tall",
     category: "decor",
@@ -175,8 +175,8 @@ const gallery = [
 
   // --- Reception ---
   {
-    src: "/images/services/reception-styling.webp",
-    full: "/images/services/reception-styling.webp",
+    src: "/golden-images-1/golden9.webp",
+    full: "/golden-images-1/golden9.webp",
     caption: "Reception stage and table styling",
     size: "wide",
     category: "reception",
@@ -189,8 +189,8 @@ const gallery = [
     category: "reception",
   },
   {
-    src: "/images/services/table-styling.webp",
-    full: "/images/services/table-styling.webp",
+    src: "/golden-images-1/golden14.webp",
+    full: "/golden-images-1/golden14.webp",
     caption: "Place setting detail, gold and ivory",
     size: "tall",
     category: "reception",
@@ -212,8 +212,8 @@ const gallery = [
     category: "engagement",
   },
   {
-    src: "/images/portfolio/priya-siddharth-3.webp",
-    full: "/images/portfolio/priya-siddharth-3.webp",
+    src: "/golden-images-1/golden23.webp",
+    full: "/golden-images-2/golden23.webp",
     caption: "Engagement portrait, evening light",
     size: "wide",
     category: "engagement",
@@ -221,22 +221,22 @@ const gallery = [
 
   // --- Mehndi ---
   {
-    src: "/images/collections/floral-wedding.webp",
-    full: "/images/collections/floral-wedding.webp",
+    src: "/assets/mendhhi.jpg",
+    full: "/assets/mendhhi.jpg",
     caption: "Mehndi function, floral backdrop",
     size: "wide",
     category: "mehndi",
   },
   {
-    src: "/images/portfolio/diya-kabir-3.webp",
-    full: "/images/portfolio/diya-kabir-3.webp",
+    src: "/assets/mendhi2.jpg",
+    full: "/assets/mendhi2.jpg",
     caption: "Bridal mehndi detail",
     size: "square",
     category: "mehndi",
   },
   {
-    src: "/images/misc/instagram-2.webp",
-    full: "/images/misc/instagram-2.webp",
+    src: "/assets/mendhi3.jpg",
+    full: "/assets/mendhi3.jpg",
     caption: "Mehndi seating, cushions and drapes",
     size: "tall",
     category: "mehndi",

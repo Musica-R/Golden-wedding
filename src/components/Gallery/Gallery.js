@@ -57,10 +57,10 @@ export default function Gallery() {
                 decoding="async"
                 className="gw-wgallery__image"
               />
-              <span className="gw-wgallery__overlay">
+              {/* <span className="gw-wgallery__overlay">
                 <span className="gw-wgallery__label">{categoryLabel(img.category)}</span>
                 <span className="gw-wgallery__caption">{img.caption}</span>
-              </span>
+              </span> */}
             </button>
           </ScrollReveal>
         ))}

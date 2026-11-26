@@ -22,7 +22,7 @@ export default function Home() {
       <IntroSection />
       <Collections limit={4} showExplore={true} />
       <SignatureStatement
-        image="/images/misc/statement-2-entrance.webp"
+        image="/assets/gallery25.JPG"
         alt="Grand floral-dressed venue entrance"
         lines={["It's not just a venue.", "It's the beginning of your story."]}
       />

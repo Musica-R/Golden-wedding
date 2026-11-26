@@ -6,7 +6,7 @@ const services = [
     title: "Wedding Planning",
     description:
       "End-to-end planning and vendor curation, so every celebration runs as gracefully as it looks.",
-    image: "/images/services/wedding-planning.webp",
+    image: "/golden-images-2/golden31.webp",
     startingPrice: "₹75,000",
   },
   {
@@ -22,7 +22,7 @@ const services = [
     title: "Mandap Design",
     description:
       "From traditional elegance to contemporary luxury, we create mandaps designed around your celebration.",
-    image: "/images/services/mandap-design.webp",
+    image: "/golden-images-1/golden20.webp",
     startingPrice: "₹85,000",
   },
   {
@@ -30,7 +30,7 @@ const services = [
     title: "Stage Decoration",
     description:
       "Sculptural backdrops in fabric, floral and light — built to anchor every key ceremony moment.",
-    image: "/images/services/stage-decoration.webp",
+    image: "/golden-images-1/golden15.webp",
     startingPrice: "₹60,000",
   },
   {

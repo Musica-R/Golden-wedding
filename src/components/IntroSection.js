@@ -13,7 +13,7 @@ export default function IntroSection() {
             className="gw-intro__image gw-intro__image--main"
           />
           <img
-            loading="lazy" src="https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=900&auto=format&fit=crop"
+            loading="lazy" src="/assets/gallery23.JPG"
             alt="Wedding cake framed by a floral hoop"
             className="gw-intro__image gw-intro__image--accent"
           />

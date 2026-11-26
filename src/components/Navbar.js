@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "../styles/navbar.css";
 
+// Image lives in the /public folder -> served from the site root
+const LOGO_SRC = "/assets/golden-logo.png";
+
 const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
@@ -19,19 +22,38 @@ export default function Navbar() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", onScroll);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [menuOpen]);
 
   return (
     <header className={`gw-navbar ${scrolled ? "gw-navbar--scrolled" : ""}`}>
       <div className="gw-navbar__inner gw-container">
-        <Link to="/" className="gw-navbar__mark" onClick={() => setMenuOpen(false)}>
-          Golden Wedding Company
+        <Link
+          to="/"
+          className="gw-navbar__mark"
+          aria-label="Golden Wedding Company – Home"
+          onClick={() => setMenuOpen(false)}
+        >
+          <img
+            src={LOGO_SRC}
+            alt=""
+            className="gw-navbar__logo"
+            width="800"
+            height="656"
+          />
+          <span className="gw-navbar__brand">
+            <span className="gw-navbar__brand-name">Golden</span>
+            <span className="gw-navbar__brand-sub">Wedding Company</span>
+          </span>
         </Link>
 
         <nav className="gw-navbar__links">
@@ -73,7 +95,24 @@ export default function Navbar() {
         className={`gw-navbar__mobile ${menuOpen ? "gw-navbar__mobile--open" : ""}`}
       >
         <div className="gw-navbar__mobile-head">
-          <span className="gw-navbar__mobile-mark">Golden Wedding Company</span>
+          <Link
+            to="/"
+            className="gw-navbar__mobile-mark"
+            aria-label="Golden Wedding Company – Home"
+            onClick={() => setMenuOpen(false)}
+          >
+            <img
+              src={LOGO_SRC}
+              alt=""
+              className="gw-navbar__mobile-logo"
+              width="800"
+              height="656"
+            />
+            <span className="gw-navbar__mobile-brand">
+              <span className="gw-navbar__mobile-brand-name">Golden</span>
+              <span className="gw-navbar__mobile-brand-sub">Wedding Company</span>
+            </span>
+          </Link>
           <button
             className="gw-navbar__mobile-close"
             aria-label="Close menu"
